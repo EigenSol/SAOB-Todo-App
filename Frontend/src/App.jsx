@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react'
 
-const API_URL = "http://localhost:5000/api/tasks";
+const API_URL = `${import.meta.env.VITE_API_URL}/api/tasks`;
 
 const App = () => {
   const [tasks, setTasks] = useState([]);
@@ -87,7 +87,7 @@ const App = () => {
     <>
       <section className='w-full h-screen bg-[#F9E8C6] flex items-center flex-col justify-center p-4'>
         <h1 className='text-2xl md:text-4xl font-extrabold mb-6 text-green-950 original-surfer-regular '>ToDo List</h1>
-        <div className="border-2 border-green-950 rounded-lg w-[95%] sm:w-[80%] md:w-[60%] lg:w-[35%] max-h-[50vh] overflow-y-auto overflow-hidden p-4 sm:p-8 flex items-center flex-col [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+        <div className="border-2 border-green-950 rounded-3xl w-[95%] sm:w-[80%] md:w-[60%] lg:w-[35%] max-h-[50vh] overflow-y-auto overflow-hidden p-4 sm:p-8 flex items-center flex-col [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
           <div className='flex flex-row gap-2'>
             <input type="text" value={input} onChange={(e) => setInput(e.target.value)} className='py-2 px-4 rounded-2xl border-2 border-green-950' />
             <button onClick={addTask} className='rounded-2xl bg-green-950 text-white px-4 py-2'>Add</button>
