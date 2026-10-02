@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Original+Surfer&display=swap');
+@import "tailwindcss";
+
+.original-surfer-regular {
+  font-family: "Original Surfer", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+*{
+  font-family: original-surfer-regular;
+}
+
+/* Add this to your index.css */
+::-webkit-scrollbar {
+  width: 6px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: #0d2818; /* Dark green matching your theme */
+  border-radius: 10px;
+}
