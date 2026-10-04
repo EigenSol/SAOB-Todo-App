@@ -11,19 +11,19 @@ app.use(express.json())
 app.use("/api/tasks", taskRoutes);
 
 app.get("/", ( req, res )=>{
-     res.send("Todo API is running");
-} )
+    res.send("Todo API is running");
+});
 
 mongoose.connect(process.env.MONGO_URI)
 .then(() => {
-    console.log("MongoDB connected");
+  console.log("MongoDB connected");
 
-    app.listen(5000, () => {
-      console.log("Server running on http://localhost:5000");
-    });
-  })
-  .catch((error) => {
-    console.log("MongoDB connection error:", error);
+  app.listen(5000, () => {
+    console.log("Server running on http://localhost:5000");
   });
+})
+.catch((error) => {
+  console.log("MongoDB connection error:", error);
+});
 
-  module.exports = app;
+module.exports = app;
